@@ -22,4 +22,6 @@
 #links a{
   display:block;
   color:white;
+  font-size:20px;
+  padding:0 0 20px;
 }
