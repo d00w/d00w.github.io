@@ -25,8 +25,8 @@ var contbox = document.getElementsByClassName("contbox");
 function clr(){
 	var x=0;
 	for(x=0; x<3; x++){
-	contbox[x].style.display = "none";
-	//alert(x);
+	document.getElementsByClassName("contbox")[x].style.display = "none";
+	alert(x);
 	}
 }
 
