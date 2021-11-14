@@ -1,8 +1,6 @@
 window.onload = function(){
   var link = document.getElementsByClassName("link");
   sbar.addEventListener("click", contswtch);
-  setTimeout(clr, 10);
-  alert("not worked");
   link[0].addEventListener("click", hc);
   link[1].addEventListener("click", dc);
   link[2].addEventListener("click", ac);
