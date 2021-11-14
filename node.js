@@ -1,7 +1,7 @@
 window.onload = function(){
   var link = document.getElementsByClassName("link");
   sbar.addEventListener("click", contswtch);
-  setTimeout(clr, 1000);
+  setTimeout(clr, 10);
   alert("not worked");
   link[0].addEventListener("click", hc);
   link[1].addEventListener("click", dc);
@@ -23,10 +23,8 @@ function contswtch(){
 }
 var contbox = document.getElementsByClassName("contbox");
 function clr(){
-	var x=0;
 	for(x=0; x<3; x++){
 	document.getElementsByClassName("contbox")[x].style.display = "none";
-	alert(x);
 	}
 }
 
