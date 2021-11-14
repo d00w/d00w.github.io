@@ -1,8 +1,11 @@
 window.onload = function(){
+  var link = document.getElementsByClassName("link");
   sbar.addEventListener("click", contswtch);
-  document.getElementsByTagName("link")[0].addEventListener("click", hc);
-  document.getElementsByTagName("link")[1].addEventListener("click", dc);
-  document.getElementsByTagName("link")[2].addEventListener("click", ac);
+  setTimeout(clr, 1000);
+  alert("not worked");
+  link[0].addEventListener("click", hc);
+  link[1].addEventListener("click", dc);
+  link[2].addEventListener("click", ac);
 }
 function contswtch(){
 	if(links.style.width == "100px"){
@@ -18,18 +21,19 @@ function contswtch(){
 	sbar.style.transform="rotate(90deg)";
 	}
 }
-
+var contbox = document.getElementsByClassName("contbox");
 function clr(){
-	for(var x=0; x<contbox.length; x++){
-	contbox[x].style.display="none"
-	}
+	var x=0;
+//	for(x=0; x<3; x++){
+	contbox[1].style.display = "none";
+	//alert(x);
+//	}
 }
 
 
 
-
 function hc(){
-	alert("poopoo");
+	contswtch();
 	clr();
 	contbox[0].style.display = "block";
 }
@@ -38,6 +42,7 @@ function hc(){
 
 
 function dc(){
+	contswtch();
 	clr();
 	contbox[1].style.display = "block";
 }
@@ -47,6 +52,7 @@ function dc(){
 
 
 function ac(){
+	contswtch();
 	clr();
 	contbox[2].style.display = "block";
 }
