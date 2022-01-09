@@ -16,3 +16,6 @@ function saveToFirebase(email) {
 saveToFirebase("eee@mail.com");
 
 }
+window.onerror=function(){
+    alert("error!");
+}
