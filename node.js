@@ -4,11 +4,20 @@ window.onload = () =>{
 	btn.ontouchstart=function(){
 		t=1;
 	}
-	btn.ontouchEnd=function(){
+	btn.ontouchend=function(){
+		t=0;
+	}
+	btn.onmousedown=function(){
+		t=1;
+	}
+	btn.onmouseup=function(){
 		t=0;
 	}
 	function loop(){
-	if(t>0)
-	 btn.innerHTML=btn.innerHTML+1;
+	 if(t==1){
+	  var x=btn.innerHTML;
+	  x++;
+	  btn.innerHTML=x;
+	 }
 	}
 }
