@@ -1,7 +1,7 @@
 window.onload = () =>{
 	var btn=document.getElementById("btn"), t;
 	btn.touchstart=function(){
-		t=setInterval(loop);
+		t=setInterval(loop, 100);
 	}
 	btn.ontouchend=function(){
 		clearInterval(t);
