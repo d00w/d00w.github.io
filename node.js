@@ -1,12 +1,14 @@
 window.onload = () =>{
-	var btn=document.getElementById("btn"), t;
-	btn.touchstart=function(){
-		t=setInterval(loop, 100);
+	var btn=document.getElementById("btn"), t=0;
+	setInterval(loop, 100);
+	btn.ontouchstart=function(){
+		t=1;
 	}
-	btn.ontouchend=function(){
-		clearInterval(t);
+	btn.ontouchEnd=function(){
+		t=0;
 	}
 	function loop(){
-		btn.innerHTML=btn.innerHTML+1;
+	if(t>0)
+	 btn.innerHTML=btn.innerHTML+1;
 	}
 }
