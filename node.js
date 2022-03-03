@@ -1,6 +1,12 @@
-window.onload=function(){
-	var cv=document.getElementById("cv");
-	cv.width=window.innerWidth;
-	cv.height=window.innerHeight;
-	var ctx=cv.getContext("2d");
+window.onload = () =>{
+	var btn=document.getElementById("btn"), t;
+	btn.touchstart=function(){
+		t=setInterval(loop);
+	}
+	btn.ontouchend=function(){
+		clearInterval(t);
+	}
+	function loop(){
+		btn.innerHTML=btn.innerHTML+1;
+	}
 }
