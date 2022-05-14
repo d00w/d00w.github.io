@@ -1,23 +1,15 @@
-window.onload = () =>{
-	var btn=document.getElementById("btn"), t=0;
-	setInterval(loop, 100);
-	btn.ontouchstart=function(){
-		t=1;
-	}
-	btn.ontouchend=function(){
-		t=0;
-	}
-	btn.onmousedown=function(){
-		t=1;
-	}
-	btn.onmouseup=function(){
-		t=0;
-	}
-	function loop(){
-	 if(t==1){
-	  var x=btn.innerHTML;
-	  x++;
-	  btn.innerHTML=x;
-	 }
-	}
+window.onload =()=>{
+    var btn = document.getElementById("btn"), nav = document.getElementById("nav");
+    btn.onclick = function(){
+        if(btn.style.left=="0px"){
+           btn.style.left="200px";
+           btn.style.transform="rotate(90deg)";
+           nav.style.width="200px";
+        }
+        else{
+            btn.style.left="0px";
+            btn.style.transform="rotate(0deg)";
+            nav.style.width=0;
+        }
+    }
 }
